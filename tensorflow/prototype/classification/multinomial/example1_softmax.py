@@ -31,5 +31,5 @@ with tf.Session() as sess:
         if step % 1000 == 0:
             print(step, sess.run(cost, feed_dict={X: x_data, Y: y_data}))
     #Test
-    test_val = sess.run(hypothesis, feed_dict={X: [[4, 1, 5, 5]]})
-    print(test_val, sess.run(tf.arg_max(test_val, 1)))
+    test_val,logits_val = sess.run([hypothesis,logits], feed_dict={X: [[4, 1, 5, 5]]})
+    print(logits_val,test_val, sess.run(tf.arg_max(test_val, 1)))

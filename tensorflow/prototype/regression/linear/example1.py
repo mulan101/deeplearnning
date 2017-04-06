@@ -4,7 +4,7 @@ Created on 2017. 3. 29.
 @author: 한제호
 '''
 import tensorflow as tf
-
+ 
 # X,Y 데이터 선언
 x_train = [1, 2, 3]
 y_train = [1, 2, 3]
