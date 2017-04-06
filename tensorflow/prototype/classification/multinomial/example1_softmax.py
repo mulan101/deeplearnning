@@ -24,7 +24,7 @@ cost = tf.reduce_mean(-tf.reduce_sum(Y * tf.log(hypothesis), axis=1))
 optimizer = tf.train.GradientDescentOptimizer(learning_rate=0.1).minimize(cost)
 
 # Launch graph
-with tf.Session() as sess:
+with tf.Session() as sess: 
     sess.run(tf.global_variables_initializer())
     for step in range(10001):
         sess.run(optimizer, feed_dict={X: x_data, Y: y_data})
