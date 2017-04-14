@@ -11,6 +11,6 @@ with tf.name_scope("adder_node") as scope:
     adder_node = a + b
     
 with tf.Session() as sess:
-    writer = tf.summary.FileWriter('C:/Python/tensorboard_log',sess.graph)
+    #writer = tf.summary.FileWriter('C:/Python/tensorboard_log',sess.graph)
     print(sess.run(adder_node, feed_dict={a:3, b:4}))
     print(sess.run(adder_node, feed_dict={a:[1,2], b:[3,4]}))
