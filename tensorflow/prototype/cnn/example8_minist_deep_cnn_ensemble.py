@@ -13,7 +13,7 @@ tf.set_random_seed(777)
 mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 
 learning_rate = 0.001
-training_epochs = 15
+training_epochs = 10
 batch_size = 100
 
 with tf.Session() as sess:

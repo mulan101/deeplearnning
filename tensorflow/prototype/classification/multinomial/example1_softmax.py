@@ -21,6 +21,7 @@ logits = tf.matmul(X, W) + b
 hypothesis = tf.nn.softmax(logits)
 
 cost = tf.reduce_mean(-tf.reduce_sum(Y * tf.log(hypothesis), axis=1))
+
 optimizer = tf.train.GradientDescentOptimizer(learning_rate=0.1).minimize(cost)
 
 # Launch graph
