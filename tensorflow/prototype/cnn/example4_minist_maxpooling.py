@@ -10,8 +10,8 @@ from tensorflow.examples.tutorials.mnist import input_data
 
 mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 img = mnist.train.images[10].reshape(28, 28)
-#plt.imshow(img, cmap='gray')
-#plt.show()
+plt.imshow(img, cmap='gray')
+plt.show()
 
 sess = tf.InteractiveSession()
 img = img.reshape(-1, 28, 28, 1)
